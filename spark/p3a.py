@@ -1,3 +1,7 @@
+# Manually Added the attribute headers in the csv files
+# studentPR.csv Shema -> Region,District,SCID,SCNAME,SCLEVEL,SEX,SID
+# escuelasPR.csv Schema -> Region,District,City,SCID,SCNAME,SCLEVEL,CBID 
+
 spark = SparkSession.builder.getOrCreate()
 schools = spark.read.format("com.databricks.spark.csv").option("header", "true").load("/home/alberto_dejesus/escuelasPR.csv")
 students = spark.read.format("com.databricks.spark.csv").option("header", "true").load("/home/alberto_dejesus/studentsPR.csv")
