@@ -8,7 +8,7 @@ select schools.region, city, count(*) from students, schools where students.SCID
 --Q2
 select city, sclevel, count(*) from schools group by city, sclevel;
 --Q3
-select count(*) from students, schools where students.SCID = schools.SCID and students.sex = 'F' and schools.city = 'Ponce';
+select count(*) from students, schools where students.SCID = schools.SCID and students.sex = 'F' and students.sclevel = 'SPR' and schools.city = 'Ponce';
 --Q4
 select schools.region, schools.district, schools.city, count(*) from students, schools where students.SCID = schools.SCID and students.sex = 'M' group by schools.region, schools.district, schools.city;
 
